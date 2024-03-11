@@ -8,10 +8,12 @@ export function trimTopic(topic: string) {
   // Fix an issue where double quotes still show in the Indonesian language
   // This will remove the specified punctuation from the end of the string
   // and also trim quotes from both the start and end if they exist.
-  return topic
-    // fix for gemini
-    .replace(/^["“”*]+|["“”*]+$/g, "")
-    .replace(/[，。！？”“"、,.!?*]*$/, "");
+  return (
+    topic
+      // fix for gemini
+      .replace(/^["“”*]+|["“”*]+$/g, "")
+      .replace(/[，。！？”“"、,.!?*]*$/, "")
+  );
 }
 
 export async function copyToClipboard(text: string) {
@@ -57,10 +59,7 @@ export async function downloadAs(text: string, filename: string) {
 
     if (result !== null) {
       try {
-        await window.__TAURI__.fs.writeTextFile(
-          result,
-          text
-        );
+        await window.__TAURI__.fs.writeTextFile(result, text);
         showToast(Locale.Download.Success);
       } catch (error) {
         showToast(Locale.Download.Failed);
@@ -216,7 +215,7 @@ function getOrCreateMeasureDom(id: string, init?: (dom: HTMLElement) => void) {
     dom = document.createElement("span");
     dom.style.position = "absolute";
     dom.style.wordBreak = "break-word";
-    dom.style.fontSize = "14px";
+    dom.style.fontSize = "16px";
     dom.style.transform = "translateY(-200vh)";
     dom.style.pointerEvents = "none";
     dom.style.opacity = "0";
