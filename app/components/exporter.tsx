@@ -56,7 +56,7 @@ export function ExportMessageModal(props: { onClose: () => void }) {
             style={{
               width: "100%",
               textAlign: "center",
-              fontSize: 14,
+              fontSize: 16,
               opacity: 0.5,
             }}
           >
@@ -546,7 +546,7 @@ export function ImagePreviewer(props: {
           <div>
             <div className={styles["main-title"]}>NextChat</div>
             <div className={styles["sub-title"]}>
-              github.com/Yidadaa/ChatGPT-Next-Web
+              github.com/TheCodeTherapy/ChatGPT-Next-Web
             </div>
             <div className={styles["icons"]}>
               <ExportAvatar avatar={config.avatar} />
