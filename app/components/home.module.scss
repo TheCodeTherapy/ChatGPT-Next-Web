@@ -1,13 +1,13 @@
 @mixin container {
   background-color: var(--white);
   border: var(--border-in-light);
-  border-radius: 20px;
+  border-radius: 7px;
   box-shadow: var(--shadow);
   color: var(--black);
   background-color: var(--white);
   min-width: 600px;
   min-height: 370px;
-  max-width: 1200px;
+  max-width: 1800px;
 
   display: flex;
   overflow: hidden;
@@ -186,7 +186,7 @@
 }
 
 .chat-item-title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bolder;
   display: block;
   width: calc(100% - 15px);
