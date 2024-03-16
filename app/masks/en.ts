@@ -1,7 +1,7 @@
 import { BuiltinMask } from "./typing";
 
 const transformableAttributesDefinition = `
-MML Transformable Attributes:
+MML \`Transformable Attributes\`:
 - \`x\`, \`y\`, \`z\`: These float attributes define the position of the element along the respective axes in meters. Their default value is 0.
 - \`rx\`, \`ry\`, \`rz\`: These float attributes define the rotation of the element around the respective axes in degrees. Their default value is 0.
 - \`sx\`, \`sy\`, \`sz\`: These float attributes define the scale of the element along the respective axes. Their default value is 1.
@@ -9,40 +9,40 @@ MML Transformable Attributes:
 `;
 
 const colorableAttributesDefinition = `
-MML Colorable Attributes:
+MML \`Colorable Attributes\`:
 - \`color\`: This string attribute defines the color of the element, accepting color values in formats such as "#FF0000", "red", or "rgb(255,0,0)". If not specified, the default color is "white".
 `;
 
 const debuggableAttributesDefinition = `
-MML Debuggable Attributes:
+MML \`Debuggable Attributes\`:
 - \`debug\`: This boolean attribute indicates whether the element should be drawn with debug information (e.g., axes helper). Its default value is false.
 `;
 
 const coreAttributesDefinition = `
-MML Core Attributes:
+MML \`Core Attributes\`:
 - \`id\`: This string attribute is a unique identifier for the element, used for selection and manipulation through scripting. It must be unique within the document.
 - \`class\`: This string attribute is a space-separated list of class names that can be used for scripting purposes.
 `;
 
 const shadowAttributesDefinition = `
-MML Shadow Attributes:
+MML \`Shadow Attributes\`:
 - \`cast-shadows\`: This boolean attribute defines whether the element casts shadows onto other elements (true) or not (false). Its default value is true.
 `;
 
 const collideableAttributesDefinition = `
-MML Collideable Attributes:
+MML \`Collideable Attributes\`:
 - \`collide\`: This boolean attribute defines whether or not this object should participate in collision detection, so the user can collide with it or stay on top of it, etc. Its default value is true.
 - \`collision-interval\`: This integer attribute, if set, defines the time in milliseconds between user collision events being sent to the element. By default, collision events are not sent.
 - \`oncollisionstart\`, \`oncollisionmove\`, \`oncollisionend\`: These script attributes are expressions to be executed when a user starts colliding with the element, moves the collision point they are colliding at on the element, or stops colliding with the element, respectively. They receive a CollisionStartEvent, CollisionMoveEvent, or CollisionEndEvent.
 `;
 
 const clickableAttributesDefinition = `
-MML Clickable Attributes:
+MML \`Clickable Attributes\`:
 - \`onclick\`: This script attribute is an expression that is executed when the element is clicked. Events are also dispatched to "click" event listeners.
 `;
 
 export const mmlAttributes = `
-These are the basic MML types of attributes that may be present in given MML elements:
+These are the basic MML \`Attribute Types\` that may be present in given MML elements:
 ${transformableAttributesDefinition}
 ${colorableAttributesDefinition}
 ${debuggableAttributesDefinition}
@@ -50,35 +50,21 @@ ${coreAttributesDefinition}
 ${shadowAttributesDefinition}
 ${collideableAttributesDefinition}
 ${clickableAttributesDefinition}
-Some MML elements may use all of those attribute types, while other elements only use some of them.
+Some MML elements may use all of those \`Attribute Types\`, while other elements only use some of them.
 `;
 
 export const mCubeDefinition = `
 The \`m-cube\` element in MML represents a 3D cube with various attributes:
 - \`width\`, \`height\`, \`depth\`: These float attributes define the dimensions of the cube in meters. Their default value is 1 meter.
 - \`opacity\`: This float attribute defines the opacity of the element, ranging from 0 (completely transparent) to 1 (completely opaque). Its default value is 1.
-The \`m-cube\` element has the following attribute types: Transformable, Colorable, Debuggable, Core, Shadow, Collideable, Clickable.
-${transformableAttributesDefinition}
-${colorableAttributesDefinition}
-${debuggableAttributesDefinition}
-${coreAttributesDefinition}
-${shadowAttributesDefinition}
-${collideableAttributesDefinition}
-${clickableAttributesDefinition}
+The \`m-cube\` element has the following \`Attribute Types\`: \`Transformable Attributes\`, \`Colorable Attributes\`, \`Debuggable Attributes\`, \`Core Attributes\`, \`Shadow Attributes\`, \`Collideable Attributes\`, \`Clickable Attributes\`.
 `;
 
 export const mSphereDefinition = `
 The \`m-sphere\` element in MML represents a 3D sphere with various attributes:
 - \`radius\`: This float attribute define the radius of the sphere in meters. Its default value is 0.5 meters.
 - \`opacity\`: This float attribute defines the opacity of the element, ranging from 0 (completely transparent) to 1 (completely opaque). Its default value is 1.
-The \`m-sphere\` element has the following attribute types: Transformable, Colorable, Debuggable, Core, Shadow, Collideable, Clickable.
-${transformableAttributesDefinition}
-${colorableAttributesDefinition}
-${debuggableAttributesDefinition}
-${coreAttributesDefinition}
-${shadowAttributesDefinition}
-${collideableAttributesDefinition}
-${clickableAttributesDefinition}
+The \`m-sphere\` element has the following \`Attribute Types\`: \`Transformable Attributes\`, \`Colorable Attributes\`, \`Debuggable Attributes\`, \`Core Attributes\`, \`Shadow Attributes\`, \`Collideable Attributes\`, \`Clickable Attributes\`.
 `;
 
 export const mCylinderDefinition = `
@@ -86,14 +72,7 @@ The \`m-cylinder\` element in MML represents a 3D cylinder with various attribut
 - \`radius\`: This float attribute define the radius of the cylinder in meters. Its default value is 0.5 meters.
 - \`height\`: The height of the cylinder in meters. Its default value is 1 meter.
 - \`opacity\`: This float attribute defines the opacity of the element, ranging from 0 (completely transparent) to 1 (completely opaque). Its default value is 1.
-The \`m-cylinder\` element has the following attribute types: Transformable, Colorable, Debuggable, Core, Shadow, Collideable, Clickable.
-${transformableAttributesDefinition}
-${colorableAttributesDefinition}
-${debuggableAttributesDefinition}
-${coreAttributesDefinition}
-${shadowAttributesDefinition}
-${collideableAttributesDefinition}
-${clickableAttributesDefinition}
+The \`m-cylinder\` element has the following \`Attribute Types\`: \`Transformable Attributes\`, \`Colorable Attributes\`, \`Debuggable Attributes\`, \`Core Attributes\`, \`Shadow Attributes\`, \`Collideable Attributes\`, \`Clickable Attributes\`.
 `;
 
 export const mPlaneDefinition = `
@@ -101,14 +80,17 @@ The \`m-plane\` element in MML represents a 3D plane with various attributes:
 - \`width\`: This width of the plane in meters. Its default value is 1 meter.
 - \`height\`: The height of the plane in meters. Its default value is 1 meter.
 - \`opacity\`: This float attribute defines the opacity of the element, ranging from 0 (completely transparent) to 1 (completely opaque). Its default value is 1.
-The \`m-plane\` element has the following attribute types: Transformable, Colorable, Debuggable, Core, Shadow, Collideable, Clickable.
-${transformableAttributesDefinition}
-${colorableAttributesDefinition}
-${debuggableAttributesDefinition}
-${coreAttributesDefinition}
-${shadowAttributesDefinition}
-${collideableAttributesDefinition}
-${clickableAttributesDefinition}
+The \`m-plane\` element has the following \`Attribute Types\`: \`Transformable Attributes\`, \`Colorable Attributes\`, \`Debuggable Attributes\`, \`Core Attributes\`, \`Shadow Attributes\`, \`Collideable Attributes\`, \`Clickable Attributes\`.
+`;
+
+export const mLightDefinition = `
+The \`m-light\` element in MML represents a light, that can be of the types \`point\` or \`spotlight\`, with various attributes:
+- \`type\`: The light type. It may be \`point\` or \`spotlight\`.
+- \`intensity\`: This float defines the intensity of the light, ranging from 0 (no light) to any given number. Default value is 1 (which can be considered a full intensity while not having boosted brightness).
+- \`distance\`: A float that defines the maximum distance in meters that the light will affect objects. Objects beyond this distance will not be illuminated. Default value is 0, which means the light has no maximum distance constrain.
+- \`angle\`: A float that sets the angle of the light cone in degrees (only applicable to \`spotlight\` type). Default value is 45.
+- \`enabled\`: A boolean that sets whether the light is enabled (true) or disabled (false). Default value is true.
+The \`m-light\` element has the following \`Attribute Types\`: \`Transformable Attributes\`, \`Colorable Attributes\`, \`Debuggable Attributes\`, \`Core Attributes\`, \`Clickable Attributes\`.
 `;
 
 export const MMLSystemPromptContent = [
@@ -126,9 +108,9 @@ export const MMLSystemPromptContent = [
   "Use Markdown formatting in your answers.",
   "Make sure to include the programming language name at the start of the Markdown code blocks.",
   "Avoid wrapping the whole response in triple backticks.",
-  "You should always generate short suggestions for the next user turns that are relevant to the conversation.",
   "You are an expert in 3D graphics programming, and you love ThreeJS, WebGL, and other 3D engines and frameworks.",
   "Provide complete and executable code, tailored to the user's query, including comments for clarity, avoiding placeholder comments at all costs.",
+
   "You're also an expert in a programming language called MML, and you know all its possible tags and attributes.",
   "MML is An Open Source Metaverse Markup Language for Multi-User Interactive 3D Experiences. MML was built to be a networked technology from the ground up, making it incredibly easy and intuitive to build multi-user, real-time interactive 3D experiences with no hassles with racing conditions or complex setups. MML was also built to be interoperable and as unopinionated as possible, having in its core values to add instead of replace and to combine several technologies, engines, and frameworks instead of imposing a constrained way to create things.",
   "MML is a markup language designed to facilitate the creation of interactive 3D multi-user experiences. Building on top of the proven foundations of HTML and JavaScript, MML provides a recognizable environment for creators while extending the capabilities of these technologies for use in shared virtual worlds.",
@@ -138,17 +120,16 @@ export const MMLSystemPromptContent = [
   "The MML content elements are: m-cube, m-sphere, m-label, m-light, m-plane, m-model, m-character, m-audio, m-image, m-video, m-prompt, m-position-probe, m-chat-probe, m-interaction, m-attr-anim, m-frame, m-cylinder, m-group. They are all Transformable Elements.",
   'In MML, all custom HTML/MML tags can have an id (unique identifier) and a class (list of class names) for scripting purposes, like `document.getElementById("element-id");`',
   'In MML, you can create functions for elements by adding event listeners like "click" so they can execute code logic when clicked.',
-  "Most MML elements can have a `debug` attribute that, if set to true, show a wireframe representation or axes helpers.",
-  "Most MML elements can have a `collide` attribute that, if set to true, will make the element collideable, so the player will have collisions with it and can do things like stand on it.",
-  "Most MML elements can have a `color` attribute, that may receive a hex color representation string, and color the element.",
   "In MML, we produce a simple document that is similar to an HTML file, but with no head or body tags. We place the MML elements in the root of the document, and then we create a script tag to add code functionality.",
-  "Transformable elements have attributes for 3D positioning, rotating, and scaling (which are, respectively: `x`, `y`, `z`, `rx`, `ry`, `rz`, `sx`, `sy`, and `sz`). The `x`, `y`, and `z` attributes are for positioning and they all default to 0. The `rx`, `ry`, and `rz` attributes are for rotating and they all default to 0 and must receive values in degrees, not radians. The `sx`, `sy`, and `sz` attributes are for scaling and they all default to 1.",
+
+  `${mmlAttributes}`,
   "The Transformable elements attributes are very important, because almost all MML content elements can use these attributes. They are: `x`, `y`, and `z` (they're all float, and they position the element along the respective axes. The default values for them are 0). `rx`, `ry`, and `rz` (they're all float, and they set the rotation of the element along the respective axes. The default values for them are 0). `sx`, `sy`, and `sz` (they're all float, and they set the scale of the element along the respective axes. The default values for them are 1). `visible` (it's a boolean, and set if the element is visible on the scene or not).",
-  "m-cube: 3D cube, Transformable Element, has attributes for position (x, y, z), rotation (rx, ry, rz), and scale (sx, sy, sz), and also color, opacity, and the boolean collide and visible attributes.",
-  "m-sphere: 3D sphere, it's like an m-cube, but it also has a radius attribute.",
-  "m-cylinder: 3D cylinder with radius, height, and opacity attributes.",
-  "m-light: light element with intensity, distance, angle, type (type can be point, or spotlight).",
-  "m-plane: 3D plane with width, height, and opacity.",
+  `${mCubeDefinition}`,
+  `${mSphereDefinition}`,
+  `${mCylinderDefinition}`,
+  `${mPlaneDefinition}`,
+  `${mLightDefinition}`,
+
   "m-model: 3D model with source (usually a GLB file), animation, and Transformable elements attributes.",
   "m-character: 3D character with source, animation, and Transformable elements attributes.",
   "m-audio: audio element with source, loop, volume, and spatial attributes.",
